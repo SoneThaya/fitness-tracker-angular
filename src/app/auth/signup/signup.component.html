@@ -6,15 +6,15 @@
     #f="ngForm"
     (ngSubmit)="onSubmit(f)"
   >
-    <mat-form-field class="opaque-form-field">
+    <mat-form-field>
       <input
         type="email"
         matInput
         placeholder="Your email"
         ngModel
         name="email"
-        required
         email
+        required
         #emailInput="ngModel"
       />
       <mat-error *ngIf="emailInput.hasError('required')"
@@ -24,15 +24,11 @@
         >E-Mail is invalid.</mat-error
       >
     </mat-form-field>
-    <mat-form-field
-      class="opaque-form-field"
-      hintLabel="Should be at least 6 characters long"
-    >
+    <mat-form-field hintLabel="Should be at least 6 characters long.">
       <input
         type="password"
         matInput
         placeholder="Your password"
-        color="primary"
         ngModel
         name="password"
         required
@@ -45,7 +41,7 @@
     <mat-form-field>
       <input
         matInput
-        placeholder="Your birth date."
+        placeholder="Your birthdate"
         [matDatepicker]="picker"
         [max]="maxDate"
         ngModel
@@ -55,11 +51,9 @@
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
-
     <mat-checkbox ngModel name="agree" required color="primary"
-      >Agree to Terms</mat-checkbox
+      >Agree to Terms and Conditions.</mat-checkbox
     >
-
     <button
       type="submit"
       mat-raised-button

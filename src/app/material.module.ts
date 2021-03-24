@@ -11,6 +11,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
   imports: [
+    MatToolbarModule,
     MatButtonModule,
     MatIconModule,
     MatFormFieldModule,
@@ -19,9 +20,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatNativeDateModule,
     MatCheckboxModule,
     MatSidenavModule,
-    MatToolbarModule,
   ],
   exports: [
+    MatToolbarModule,
     MatButtonModule,
     MatIconModule,
     MatFormFieldModule,
@@ -30,7 +31,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatNativeDateModule,
     MatCheckboxModule,
     MatSidenavModule,
-    MatToolbarModule,
   ],
 })
 export class MaterialModule {}
