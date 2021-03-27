@@ -1,3 +1,4 @@
+import { StopTrainingComponent } from './training/current-training/stop-training.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './material.module';
 import { FormsModule } from '@angular/forms';
@@ -29,6 +30,7 @@ import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.com
     WelcomeComponent,
     HeaderComponent,
     SidenavListComponent,
+    StopTrainingComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -40,5 +42,7 @@ import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.com
   ],
   providers: [],
   bootstrap: [AppComponent],
+  // entryComponents used for popup/modals
+  entryComponents: [StopTrainingComponent],
 })
 export class AppModule {}
