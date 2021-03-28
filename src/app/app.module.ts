@@ -1,3 +1,4 @@
+import { AuthService } from './auth/auth.service';
 import { StopTrainingComponent } from './training/current-training/stop-training.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './material.module';
@@ -40,7 +41,7 @@ import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.com
     FlexLayoutModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent],
   // entryComponents used for popup/modals
   entryComponents: [StopTrainingComponent],
