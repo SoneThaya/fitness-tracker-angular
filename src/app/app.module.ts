@@ -1,3 +1,4 @@
+import { UIService } from './shared/ui.service';
 import { environment } from './../environments/environment';
 import { TrainingService } from './training/training.service';
 import { AuthService } from './auth/auth.service';
@@ -50,7 +51,7 @@ import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.com
     AngularFirestoreModule,
     AngularFireAuthModule,
   ],
-  providers: [AuthService, TrainingService],
+  providers: [AuthService, TrainingService, UIService],
   bootstrap: [AppComponent],
   // entryComponents used for popup/modals
   entryComponents: [StopTrainingComponent],
