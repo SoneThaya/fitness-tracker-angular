@@ -1,3 +1,4 @@
+import { TrainingModule } from './training/training.module';
 import { AuthModule } from './auth/auth.module';
 import { UIService } from './shared/ui.service';
 import { environment } from './../environments/environment';
@@ -12,13 +13,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 
-import { TrainingComponent } from './training/training.component';
-import { CurrentTrainingComponent } from './training/current-training/current-training.component';
-import { NewTrainingComponent } from './training/new-training/new-training.component';
-import { PastTrainingsComponent } from './training/past-trainings/past-trainings.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
@@ -26,14 +22,9 @@ import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.com
 @NgModule({
   declarations: [
     AppComponent,
-    TrainingComponent,
-    CurrentTrainingComponent,
-    NewTrainingComponent,
-    PastTrainingsComponent,
     WelcomeComponent,
     HeaderComponent,
     SidenavListComponent,
-    StopTrainingComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -42,13 +33,13 @@ import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.com
     MaterialModule,
     FlexLayoutModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule,
     AngularFireAuthModule,
     AuthModule,
+    TrainingModule,
   ],
   providers: [AuthService, TrainingService, UIService],
   bootstrap: [AppComponent],
   // entryComponents used for popup/modals
-  entryComponents: [StopTrainingComponent],
+
 })
 export class AppModule {}
