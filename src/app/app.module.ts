@@ -1,3 +1,4 @@
+import { AuthModule } from './auth/auth.module';
 import { UIService } from './shared/ui.service';
 import { environment } from './../environments/environment';
 import { TrainingService } from './training/training.service';
@@ -5,7 +6,6 @@ import { AuthService } from './auth/auth.service';
 import { StopTrainingComponent } from './training/current-training/stop-training.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './material.module';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
@@ -15,8 +15,6 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 
-import { SignupComponent } from './auth/signup/signup.component';
-import { LoginComponent } from './auth/login/login.component';
 import { TrainingComponent } from './training/training.component';
 import { CurrentTrainingComponent } from './training/current-training/current-training.component';
 import { NewTrainingComponent } from './training/new-training/new-training.component';
@@ -28,8 +26,6 @@ import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.com
 @NgModule({
   declarations: [
     AppComponent,
-    SignupComponent,
-    LoginComponent,
     TrainingComponent,
     CurrentTrainingComponent,
     NewTrainingComponent,
@@ -45,11 +41,10 @@ import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.com
     BrowserModule,
     MaterialModule,
     FlexLayoutModule,
-    FormsModule,
-    ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
+    AuthModule,
   ],
   providers: [AuthService, TrainingService, UIService],
   bootstrap: [AppComponent],
