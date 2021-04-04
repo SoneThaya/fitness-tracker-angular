@@ -1,4 +1,4 @@
-import { TrainingModule } from './training/training.module';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AuthModule } from './auth/auth.module';
 import { UIService } from './shared/ui.service';
 import { environment } from './../environments/environment';
@@ -32,11 +32,10 @@ import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.com
     FlexLayoutModule,
     AngularFireModule.initializeApp(environment.firebase),
     AuthModule,
-    TrainingModule,
+    AngularFirestoreModule,
   ],
   providers: [AuthService, TrainingService, UIService],
   bootstrap: [AppComponent],
   // entryComponents used for popup/modals
-
 })
 export class AppModule {}
