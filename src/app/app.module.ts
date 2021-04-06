@@ -16,6 +16,8 @@ import { AngularFireModule } from '@angular/fire';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
+import { StoreModule } from '@ngrx/store';
+import { appReducer } from './app.reducer';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.com
     AngularFireModule.initializeApp(environment.firebase),
     AuthModule,
     AngularFirestoreModule,
+    StoreModule.forRoot({ ui: appReducer }),
   ],
   providers: [AuthService, TrainingService, UIService],
   bootstrap: [AppComponent],
