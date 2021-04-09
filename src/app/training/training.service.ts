@@ -1,7 +1,6 @@
 import { AngularFirestore } from '@angular/fire/firestore';
 
 import { Injectable } from '@angular/core';
-import { AngularFirestore } from 'angularfire2/firestore';
 import { Subscription } from 'rxjs';
 import { take } from 'rxjs/operators';
 import { Store } from '@ngrx/store';
